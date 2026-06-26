@@ -1,0 +1,27 @@
+type SectionHeaderProps = {
+  eyebrow: string;
+  title: string;
+  description: string;
+};
+
+export function SectionHeader({
+  eyebrow,
+  title,
+  description
+}: SectionHeaderProps) {
+  return (
+    <div className="grid gap-4 border-t border-ink/15 pt-5 lg:grid-cols-[0.42fr_1fr]">
+      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+        {eyebrow}
+      </p>
+      <div className="max-w-4xl">
+        <h2 className="font-display text-3xl font-semibold leading-tight text-ink sm:text-5xl">
+          {title}
+        </h2>
+        <p className="mt-4 max-w-2xl text-base leading-7 text-muted">
+          {description}
+        </p>
+      </div>
+    </div>
+  );
+}
