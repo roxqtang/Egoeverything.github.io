@@ -75,14 +75,16 @@ export const stats = [
   }
 ];
 
+const assetPath = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${path}`;
+
 export const paperAssets = {
-  pdf: "/paper-assets/ECCV_2026_EgoEverything.pdf",
-  overview: "/paper-assets/overview-figure.png",
-  pipeline: "/paper-assets/pipeline-figure.png",
-  mcq: "/paper-assets/mcq-example.png",
-  questionDistribution: "/paper-assets/question-distribution.png",
-  objectDistribution: "/paper-assets/object-distribution.png",
-  resultsTable: "/paper-assets/results-table.png"
+  pdf: assetPath("/paper-assets/ECCV_2026_EgoEverything.pdf"),
+  overview: assetPath("/paper-assets/overview-figure.png"),
+  pipeline: assetPath("/paper-assets/pipeline-figure.png"),
+  mcq: assetPath("/paper-assets/mcq-example.png"),
+  questionDistribution: assetPath("/paper-assets/question-distribution.png"),
+  objectDistribution: assetPath("/paper-assets/object-distribution.png"),
+  resultsTable: assetPath("/paper-assets/results-table.png")
 };
 
 export const paperVisuals = [
@@ -193,3 +195,4 @@ export const footerLinks = [
   { label: "Dataset", href: "#dataset", icon: Database },
   { label: "Contact", href: "mailto:egoeverything@example.edu", icon: Mail }
 ];
+
